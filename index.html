@@ -5,6 +5,7 @@
     <title></title>
     <style>
     body {
+ 
       margin: 0;
       font-family: Arial, sans-serif;
     }
@@ -21,7 +22,7 @@
       background-color: transparent;
       width: 90%;
       scroll-behavior: smooth;
-      transition: background-color 0.4s ease;
+     
     }
 
     .navbar .logo {
@@ -55,6 +56,7 @@
     .navbar ul li a:hover {
       color: #f39c12;
     }
+    
 img{
   width: 100%;
   position: relative;
@@ -64,56 +66,90 @@ img{
   height: 703px;
   /* top: -5%; */
 }
+img{
+  width: 100%;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  
+  height: 703px;
+}
 h1{
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #000000;
   margin-top: 10%;
-  margin-left: 15%;
-
-}    
+  margin-left: 12%;
+  background-color: transparent;
+  z-index: 999;
+  /* position: fixed; */
+  display: flex;
+      justify-content: space-between;
+/* justify-content: center; */
+}  
+  .aboutus  {
+  
+    
+  }
 p{
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #000000;
   margin-top: 1%;
-  margin-left: 15%;
+  margin-left: 12%;
   width: 54%;
-  margin-bottom: 20%;
-  
+  margin-bottom: 20%; 
+  background-color: transparent;
+  z-index: 999;
+  /* position: fixed; */
+  display: flex;
+      justify-content: center;
 }
+
+
   </style>
   </head>
   <body>
-
+    <div id="home1" class="home1"></div>
     <!-- Navbar  -->
 
     <nav class="navbar">
       <div class="logo">Urbar Kicks</div>
 
       <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#home1">HOME</a></li>
+        <li><a href="#aboutus">ABOUT US</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
     <img src="edited.jpeg" alt>
 
-    <div class="aboutus">
-      <h1><b>
-        ABOUT US
-        </b>
-      </h1>
-      
+    <!-- aboutus page -->
+    <div class="change-color"></div>
+    
+    <div id="aboutus" class="aboutus">
+      <h1><b>  ABOUT US </b>  </h1>
+
       <div class="description">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod exercitationem, 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+          exercitationem,
           nihil molestias quaerat quasi
-           atque ipsa fugiat perferendis dolorem accusamus dolorum aperiam similique ullam optio minima blanditiis quis quos, 
-           a quisquam expedita nisi eum animi. Facere molestias dolore quas, quibusdam placeat voluptatibus qui neque aliquid praesentium et odit cumque corporis?
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatibus quia exercitationem quis vel perferendis non, itaque, animi fugiat nostrum perspiciatis cupiditate veniam. At tenetur, corporis harum commodi labore numquam?
+          atque ipsa fugiat perferendis dolorem accusamus dolorum aperiam
+          similique ullam optio minima blanditiis quis quos,
+          a quisquam expedita nisi eum animi. Facere molestias dolore quas,
+          quibusdam placeat voluptatibus qui neque aliquid praesentium et odit
+          cumque corporis?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+          voluptatibus quia exercitationem quis vel perferendis non, itaque,
+          animi fugiat nostrum perspiciatis cupiditate veniam. At tenetur,
+          corporis harum commodi labore numquam?
 
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tempore omnis, quis doloribus magnam earum molestiae temporibus. Voluptatibus ducimus recusandae possimus laborum numquam temporibus quaerat, laboriosam illo facilis iste enim?</p>
-     
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+          tempore omnis, quis doloribus magnam earum molestiae temporibus.
+          Voluptatibus ducimus recusandae possimus laborum numquam temporibus
+          quaerat, laboriosam illo facilis iste enim?</p>
+
       </div>
     </div>
-    </body>
-  </html>
+
+  </body>
+</html>
