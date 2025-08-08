@@ -1,157 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-    body {
- 
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    /* Navbar */
-    .navbar {
-      background-color: #000000;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      z-index: 999 ;
-      position: fixed;
-      background-color: transparent;
-      width: 90%;
-      scroll-behavior: smooth;
-     
-    }
-
-    .navbar .logo {
-      color: rgb(0, 0, 0);
-      font-size: 24px;
-      font-weight: bold;
-      color: rgb(0, 0, 0);
-    }
-
-    .navbar ul {
-      list-style: none; 
-      display: flex;
-      margin: 0;
-      padding: 0;
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    .navbar ul li {
-      margin-left: 20px;
-      color: rgb(2, 1, 1);
-    }
-
-    .navbar ul li a {
-      text-decoration: none;
-      color: rgb(10, 9, 9);
-      font-size: 16px;
-      transition: color 0.3s;
-      color: rgb(4, 4, 4);
-    }
-
-    .navbar ul li a:hover {
-      color: #f39c12;
-    }
-    
-img{
-  width: 100%;
-  position: relative;
-  left: 0px;
-  top: 0px;
-  
-  height: 703px;
-  /* top: -5%; */
+<head>
+<meta charset="UTF-8">
+<title>Urban Kicks</title>
+<style>
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-img{
-  width: 100%;
-  position: relative;
-  left: 0px;
-  top: 0px;
-  
-  height: 703px;
-}
-h1{
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: #000000;
-  margin-top: 10%;
-  margin-left: 12%;
-  background-color: transparent;
-  z-index: 999;
-  /* position: fixed; */
+
+/* Navbar */
+.navbar {
+  background-color: #000;
+  padding: 10px 20px;
   display: flex;
-      justify-content: space-between;
-/* justify-content: center; */
-}  
-  .aboutus  {
-  background-image: url(flowers.jpg);
-  background-repeat: no-repeat;
-  width: 60%;
-    
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar ul li a:hover {
+  color: #f39c12;
+}
+
+/* Hero / Heading section */
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 5% 50px;
+  gap: 20px;
+}
+
+.heading-text {
+  flex: 1 1 400px;
+}
+
+.heading-text h3 {
+  font-size: 58px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 20px;
+  color: #0066cc;
+}
+
+.heading-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+.heading-img {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.heading-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10%;
+  margin-bottom:90px;
+}
+
+/* About Us section */
+.aboutus {
+  background-color: lightblue;
+  padding: 50px 5%;
+}
+
+.aboutus h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.aboutus .description {
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #050404;
+}
+
+/* Contact section */
+.section {
+  padding: 50px 5%;
+}
+
+.section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .heading {
+    flex-direction: column;
+    text-align: center;
   }
-p{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #000000;
-  margin-top: 1%;
-  margin-left: 12%;
-  width: 54%;
-  margin-bottom: 20%; 
-  background-color: transparent;
-  z-index: 999;
-  /* position: fixed; */
-  display: flex;
-      justify-content: center;
+  .heading-text {
+    order: 1;
+  }
+  .heading-img {
+    order: 2;
+  }
+}
+/* button */
+.btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 2px solid #0066cc;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-right: 10px;
+  margin-top: 15px;
 }
 
+/* First button: hover */
+.btn-primary {
+  background-color: #0066cc;
+  color: white;
+}
 
-  </style>
-  </head>
-  <body>
-    <div id="home1" class="home1"></div>
-    <!-- Navbar  -->
+.btn-primary:hover {
+  background-color: #0066cc;
+  
+  transform: scale(1.05);
+}
 
-    <nav class="navbar">
-      <div class="logo">Urbar Kicks</div>
+/* Second button: outline */
+.btn-outline {
+  background-color: white;
+  color: #0066cc;
+}
 
-      <ul>
-        <li><a href="#home1">HOME</a></li>
-        <li><a href="#aboutus">ABOUT US</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </nav>
-    <img src="edited.jpeg" alt>
+.btn-outline:hover {
+  background-color: #0066cc;
+  color: white;
+  transform: scale(1.05);
+}
+</style>
+</head>
+<body>
 
-    <!-- aboutus page -->
-    <div class="change-color"></div>
-    
-    <div id="aboutus" class="aboutus">
-      <h1><b>  ABOUT US </b>  </h1>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Urban Kicks</div>
+  <ul>
+    <li><a href="#home1">HOME</a></li>
+    <li><a href="#aboutus">ABOUT US</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
 
-      <div class="description">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-          exercitationem,
-          nihil molestias quaerat quasi
-          atque ipsa fugiat perferendis dolorem accusamus dolorum aperiam
-          similique ullam optio minima blanditiis quis quos,
-          a quisquam expedita nisi eum animi. Facere molestias dolore quas,
-          quibusdam placeat voluptatibus qui neque aliquid praesentium et odit
-          cumque corporis?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-          voluptatibus quia exercitationem quis vel perferendis non, itaque,
-          animi fugiat nostrum perspiciatis cupiditate veniam. At tenetur,
-          corporis harum commodi labore numquam?
+<!-- Heading / Hero -->
+<div id="home1" class="heading">
+  <div class="heading-text">
+    <h3>Strategic Solutions for Business Growth</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <button class="btn btn-primary">Get a Free Consultation</button>
+<button class="btn btn-outline">Our Services</button>
+  </div>
+  <div class="heading-img">
+    <img src="images/about-8.webp" alt="homeimg">
+  </div>
+</div>
 
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          tempore omnis, quis doloribus magnam earum molestiae temporibus.
-          Voluptatibus ducimus recusandae possimus laborum numquam temporibus
-          quaerat, laboriosam illo facilis iste enim?</p>
+<!-- About Us -->
+<div id="aboutus" class="aboutus">
+  <h2><b>ABOUT US</b></h2>
+  <div class="description">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod exercitationem,
+    nihil molestias quaerat quasi atque ipsa fugiat perferendis dolorem accusamus dolorum aperiam
+    similique ullam optio minima blanditiis quis quos,
+    a quisquam expedita nisi eum animi. Facere molestias dolore quas,
+    quibusdam placeat voluptatibus qui neque aliquid praesentium et odit
+    cumque corporis?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatibus quia exercitationem quis vel perferendis non, itaque,
+    animi fugiat nostrum perspiciatis cupiditate veniam. At tenetur,
+    corporis harum commodi labore numquam?</p>
+  </div>
+</div>
 
-      </div>
-    </div>
+<!-- Contact -->
+<div id="contact" class="section">
+  <h1>Contact</h1>
+  <p>This is the contact section.</p>
+</div>
 
-  </body>
+</body>
 </html>
