@@ -90,7 +90,11 @@ body {
         padding-top: 10px;
         width: 100%;
     }
-    
+   .aboutus .underline {
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+}
     .about-text {
         flex: 1 1 500px;
     }
@@ -381,3 +385,26 @@ input,
             border-radius: 5px;
             padding-top: 10px;
         }
+        /* services section */
+.services .underline {
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.service-card {
+  border-radius: 10px;
+  border-top: 5px solid #007bff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.icon img {
+  background-color: #eaf3ff;
+  padding: 10px;
+  border-radius: 50%;
+}
