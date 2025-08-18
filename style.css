@@ -27,6 +27,7 @@ body {
   color: white;
   font-size: 16px;
   transition: color 0.3s ease;
+  align-items: right;
 }
 .navbar-nav .nav-link:hover {
   color: #ccc;
@@ -87,13 +88,13 @@ body {
         gap: 30px;
         padding-left: -2px;
         height: 90vh;
-        padding-top: 10px;
+        padding-top: 1px;
         width: 100%;
     }
    .aboutus .underline {
   width: 50px;
   height: 3px;
-  background-color: #007bff;
+  background-color: #707070;
 }
     .about-text {
         flex: 1 1 500px;
@@ -103,6 +104,11 @@ body {
         font-weight: bold;
         letter-spacing: 1px;
         margin-bottom: 10px;
+    }
+    .headingabout{
+      top: 10px;
+      text-align: center;
+      
     }
     .about-text h2 {
       
@@ -190,41 +196,24 @@ body {
    
     .about-images {
         flex: 1 1 400px;
-        position: relative;
+  display: flex;
+
+  justify-content: center;
         
     }
     .about-images img.main-img {
-       max-width: 100%;
+        max-width: 100%;
   height: auto;
   border-radius: 10%;
   margin-top: -10px;
-  margin-bottom:80px;
-  width: 100%;
+  margin-bottom:10px;
     }
-    /* .about-images img.overlay-img {
-        position: absolute;
-        top: 160px;
-        left: -50px;
-        width: 40%;
-        border-radius: 12%;
-        border: 5px solid rgb(255, 255, 255);
-    } */
-    /* .experience-badge {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        background: #0072ff;
-        color: white;
-        padding: 15px 20px;
-        border-radius: 10px;
-        font-size: 18px;
-        font-weight: bold;
-    } */
-     
+   
 /* Contact section */
 .section {
   padding: 50px 5%;
 height: 10vh;
+margin-top: -10px;
 }
 
 .section h1 {
@@ -385,26 +374,264 @@ input,
             border-radius: 5px;
             padding-top: 10px;
         }
-        /* services section */
-.services .underline {
-  width: 50px;
-  height: 3px;
-  background-color: #007bff;
+
+
+
+/* services section */
+.services {
+  padding: 60px 20px;
+  top: -100px;
 }
 
-.service-card {
-  border-radius: 10px;
-  border-top: 5px solid #007bff;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  border-top: 5px solid #4a4a4a;
+  top: -40px;
+  width: 420px;
+  padding: 5px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #eaf3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #6190c2;
+  margin-bottom: 15px;
+}
+h2{
+
+      
+        font-size: 28px;
+        margin-bottom: 15px;
+   
+}
+h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+h3 strong {
+  font-weight: bold;
+  color: #222;
+}
+
+h3 .blue {
+  color: #007bff;
+}
+
+p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .icon img {
   background-color: #eaf3ff;
   padding: 10px;
+  border-radius: 20%;
+}
+.service-card .digital{
+  width: 10%;
+} 
+.services {
+  padding: 60px 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  border-top: 5px solid rgba(0, 0, 0, 0.968);
+  width: 300px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+  background: #eaf3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+h3 strong {
+  font-weight: bold;
+  color: #222;
+}
+
+h3 .blue {
+  color: #007bff;
+}
+
+p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #dadada;
+  color: #007bff;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* advance capabilities */
+.capabilities {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.capabilities h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.capabilities p {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cardadvance { 
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardadvance:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.number {
+  display: inline-block;
+  background: #3f4245;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.tag {
+  float: right;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tag.enterprise {
+  background: #ffe6e6;
+  color: #d9534f;
+}
+
+.tag.premium {
+  background: #e6f9ee;
+  color: #28a745;
+}
+
+.tag.standard {
+  background: #eaf3ff;
+  color: #8787ec;
+}
+
+.tag.basic {
+  background: #fff3cd;
+  color: #0f47e4;
+}
+
+.cardadvance h3 {
+  margin: 20px 0 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cardadvance p {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.cardadvance ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cardadvance ul li {
+  color: #28a745;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
 }
