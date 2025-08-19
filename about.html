@@ -4,73 +4,81 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- Bootstrap CSS -->
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-   
-    <title>about us</title>
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <title>About Us</title>
   </head>
   <body>
     <link rel="stylesheet" href="style.css">
+
     <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fade-in">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Urban Kicks</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="/home.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-        
-          <li class="nav-item"><a class="nav-link" href="/services.html">services</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-    <!-- About Us -->
-<div class="section-heading">
-    <h1>About Us</h1>
-  </div>
-
-  <section class="about-section">
-    <div class="about-content">
-      <h4>More About Us</h4>
-      <h2>Building Trust with Experience</h2>
-      <p>
-        We are dedicated to providing innovative and reliable solutions that
-        help businesses thrive. With a strong focus on quality and customer
-        satisfaction, we ensure that every project delivers real value.
-      </p>
-
-      <ul class="features">
-        <li>Professional business solutions</li>
-        <li>Trusted by clients worldwide</li>
-        <li>Years of industry experience</li>
-        <li>Focused on innovation</li>
-        <li>Customer-first approach</li>
-        <li>Reliable and scalable services</li>
-      </ul>
-
-      <!-- Button -->
-      <a href="about.html" class="about-btn">Learn More</a>
+    <!-- About Us Heading -->
+    <div class="section-heading text-center mt-4">
+      <h1 class="wow animate__animated animate__fadeInUp">About Us</h1>
     </div>
 
-    <div class="about-image">
-      <img src="aboutus1.png" alt="About Us">
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="about-section d-flex flex-wrap align-items-center mt-5">
+      <div class="about-content col-md-6 wow animate__animated animate__fadeInLeft">
+        <h4>More About Us</h4>
+        <h2>Building Trust with Experience</h2>
+        <p>
+          We are dedicated to providing innovative and reliable solutions that
+          help businesses thrive. With a strong focus on quality and customer
+          satisfaction, we ensure that every project delivers real value.
+        </p>
 
-<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <ul class="features">
+          <li>Professional business solutions</li>
+          <li>Trusted by clients worldwide</li>
+          <li>Years of industry experience</li>
+          <li>Focused on innovation</li>
+          <li>Customer-first approach</li>
+          <li>Reliable and scalable services</li>
+        </ul>
+
+        <a href="about.html" class="about-btn btn btn-dark wow animate__animated animate__fadeInUp">Learn More</a>
+      </div>
+
+      <div class="about-image col-md-6 text-center wow animate__animated animate__fadeInRight">
+        <img src="aboutus1.png" alt="About Us" class="img-fluid">
+      </div>
+    </section>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-   
+
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

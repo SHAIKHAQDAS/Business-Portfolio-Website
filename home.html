@@ -4,148 +4,144 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-   
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
 
-    <title>urban kicks</title>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title>urban kicks</title>  
   </head>
   <body>
    <link rel="stylesheet" href="style.css">
-<!-- Navbar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+<!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fade-in">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Urban Kicks</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="/home.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-        
-        <li class="nav-item"><a class="nav-link" href="/services.html">services</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+
 <!-- Heading / Hero -->
-<div id="home1" class="heading">
-  <div class="heading-text">
+<div id="home1" class="heading wow animate__animated animate__fadeInUp">
+  <div class="heading-text wow animate__animated animate__fadeInLeft">
     <h3>Strategic Solutions for Business Growth</h3>
     <p>Welcome to my portfolio — a showcase of my work, skills, and passion for delivering creative and reliable digital solutions. From designing clean, user-friendly websites to building impactful projects, I focus on helping businesses and ideas grow with technology. Explore my work and discover how I can add value to your vision.</p>
-    <button class="btn btn-primary">Get a Free Consultation</button>
-<button class="btn btn-outline">Our Services</button>
+    <a href="contact.html">
+      <button class="btn btn-primary">Get a Free Consultation</button>
+    </a>
+    <a href="services.html">
+      <button class="btn btn-outline">Our Services</button>
+    </a>
   </div>
-  <div class="heading-img">
-   <img src="home2.png" class="img-fluid" alt="Responsive image">
+  <div class="heading-img wow animate__animated animate__fadeInRight">
+    <img src="home2.png" class="img-fluid" alt="Responsive image">
   </div>
-  
 </div>
-<!-- about section -->
-<div class="section-heading">
-    <h1>About Us</h1>
+
+<!-- About section -->
+<div class="section-heading text-center wow animate__animated animate__fadeInUp">
+  <h1>About Us</h1>
+</div>
+
+<section class="about-section">
+  <div class="about-content wow animate__animated animate__fadeInLeft">
+    <h4>More About Us</h4>
+    <h2>Building Trust with Experience</h2>
+    <p>
+      We are dedicated to providing innovative and reliable solutions that
+      help businesses thrive. With a strong focus on quality and customer
+      satisfaction, we ensure that every project delivers real value.
+    </p>
+
+    <ul class="features">
+      <li>Professional business solutions</li>
+      <li>Trusted by clients worldwide</li>
+      <li>Years of industry experience</li>
+      <li>Focused on innovation</li>
+      <li>Customer-first approach</li>
+      <li>Reliable and scalable services</li>
+    </ul>
+
+    <!-- Button -->
+    <a href="about.html" class="about-btn">Learn More</a>
   </div>
 
-  <section class="about-section">
-    <div class="about-content">
-      <h4>More About Us</h4>
-      <h2>Building Trust with Experience</h2>
-      <p>
-        We are dedicated to providing innovative and reliable solutions that
-        help businesses thrive. With a strong focus on quality and customer
-        satisfaction, we ensure that every project delivers real value.
-      </p>
+  <div class="about-image wow animate__animated animate__zoomIn">
+    <img src="aboutus1.png" alt="About Us">
+  </div>
+</section>
 
-      <ul class="features">
-        <li>Professional business solutions</li>
-        <li>Trusted by clients worldwide</li>
-        <li>Years of industry experience</li>
-        <li>Focused on innovation</li>
-        <li>Customer-first approach</li>
-        <li>Reliable and scalable services</li>
-      </ul>
-
-      <!-- Button -->
-      <a href="about.html" class="about-btn">Learn More</a>
-    </div>
-
-    <div class="about-image">
-      <img src="aboutus1.png" alt="About Us">
-    </div>
-  </section>
-
-    
-<!-- services section -->
- <section class="services py-5" >
-  <div class="container" >
-    <div class="text-center mb-5">
+<!-- Services section -->
+ 
+<section class="services py-5">
+  <div class="container">
+    <div class="text-center mb-5 wow animate__animated animate__fadeInUp">
       <h2 class="fw-bold">Services</h2>
       <div class="underline mx-auto mb-3"></div>
       <p class="text-muted">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      
     </div>
-</div>
-
+  </div>
 </section>
- 
-    <section class="services">
-  <div class="container">
 
-    <!-- service Card 1 -->
-    <div class="card">
-      <div class="icon">
-        🎨
-      </div>
+<section class="services">
+  <div class="container d-flex flex-wrap justify-content-center">
+    <!-- Service Cards -->
+    <div class="card m-2 wow animate__animated animate__fadeInUp">
+      <div class="icon">🎨</div>
       <h3><strong>Creative</strong> <span class="blue">branding</span></h3>
-      <p>Suspendisse in ultricies ipsum. Nulla commodo sem ac tortor rhoncus, vel volutpat magna varius. Nam porta felis non convallis finibus.</p>
+      <p>Suspendisse in ultricies ipsum. Nulla commodo sem ac tortor rhoncus, vel volutpat magna varius.</p>
       <div class="arrow">↗</div>
     </div>
 
-    <!-- service Card 2 -->
-    <div class="card">
-      <div class="icon">
-        💎
-      </div>
+    <div class="card m-2 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+      <div class="icon">💎</div>
       <h3><strong>Design</strong> <span class="blue">systems</span></h3>
-      <p>Fusce aliquet, nibh ac facilisis viverra, nulla purus aliquet diam, quis consectetur risus dolor a diam. Vivamus convallis lacinia magna.</p>
+      <p>Fusce aliquet, nibh ac facilisis viverra, nulla purus aliquet diam, quis consectetur risus dolor a diam.</p>
       <div class="arrow">↗</div>
     </div>
 
-    <!-- service Card 3 -->
-    <div class="card">
-      <div class="icon">
-        📢
-      </div>
+    <div class="card m-2 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+      <div class="icon">📢</div>
       <h3><strong>Marketing</strong> <span class="blue">strategies</span></h3>
-      <p>Aliquam erat volutpat. Integer at sapien at risus elementum ornare a sit amet odio. Mauris quis magna vel enim pretium maximus.</p>
+      <p>Aliquam erat volutpat. Integer at sapien at risus elementum ornare a sit amet odio.</p>
       <div class="arrow">↗</div>
     </div>
-<div class="button-container">
-        <a href="services.html">
-    <button class="more-btn" >know more our services</button>
-</a>
+  </div>
 
-   </div>
-  </section>
- 
-  
-  <section class="capabilities">
-  <div class="text-center">
+  <div class="button-container text-center mt-4">
+    <a href="services.html">
+      <button class="more-btn">Know More Our Services</button>
+    </a>
+  </div>
+</section>
+
+<!-- Advanced Capabilities -->
+<section class="capabilities">
+  <div class="text-center wow animate__animated animate__fadeInUp">
     <h2>Advanced Capabilities</h2>
-     <div class="underline mx-auto mb-3"></div>
+    <div class="underline mx-auto mb-3"></div>
     <p>Discover powerful features designed to elevate your business operations to the next level of excellence.</p>
   </div>
 
-  <div class="container">
-
-    <!-- advance Card 1 -->
-     <div class="cardadvance">
+  <div class="containeradvance d-flex flex-wrap justify-content-center">
+    <div class="cardadvance wow animate__animated animate__fadeInUp">
       <span class="number">01</span>
       <span class="tag enterprise">ENTERPRISE</span>
       <h3>Automated Workflow Engine</h3>
@@ -156,8 +152,7 @@
       </ul>
     </div>
 
-    <!--advance Card 2 -->
-    <div class="cardadvance">
+    <div class="cardadvance wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
       <span class="number">02</span>
       <span class="tag premium">PREMIUM</span>
       <h3>Real-time Collaboration</h3>
@@ -167,68 +162,58 @@
         <li>✔ Team Sync</li>
       </ul>
     </div>
-
-    <!-- advance Card 3 -->
-    <div class="cardadvance">
-      <span class="number">03</span>
-      <span class="tag standard">STANDARD</span>
-      <h3>Data Security & Compliance</h3>
-      <p>Protect sensitive information with enterprise-grade encryption and industry-standard compliance frameworks.</p>
-      <ul>
-        <li>✔ Secure Encryption</li>
-        <li>✔ Compliance Ready</li>
-      </ul>
-    </div>
   </div>
 </section>
- <!--why us  -->
+
+<!-- Why Us -->
 <section class="why-us">
   <div class="container">
-    <h2 class="section-title">Why Us</h2>
+    <h2 class="section-title text-center wow animate__animated animate__fadeInUp">Why Us</h2>
     <div class="underline mx-auto mb-3"></div>
-    <p class="subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    <p class="subtitle text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
     
-    <div class="why-us-content">
-      <!-- Left side: cards -->
+    <div class="why-us-content d-flex flex-wrap justify-content-between">
       <div class="cards">
-        <div class="card">
+        <div class="cardwhy wow animate__animated animate__fadeInLeft">
           <h3>01</h3>
           <h4>Primus contactus</h4>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum.</p>
         </div>
-        <div class="card">
+        <div class="cardwhy wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
           <h3>02</h3>
           <h4>Quaestio investigatio</h4>
-          <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo.</p>
+          <p>Curabitur ligula sapien, tincidunt non, euismod vitae.</p>
         </div>
-        <div class="card">
+        <div class="cardwhy wow animate__animated animate__fadeInLeft" data-wow-delay="0.4s">
           <h3>03</h3>
           <h4>Solutio</h4>
-          <p>Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor.</p>
+          <p>Maecenas malesuada. Praesent congue erat at massa.</p>
         </div>
-        <div class="card">
+        <div class="cardwhy wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
           <h3>04</h3>
           <h4>Support</h4>
-          <p>Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet.</p>
+          <p>Aenean ut eros et nisl sagittis vestibulum.</p>
         </div>
       </div>
 
-      <!-- Right side: image -->
-      <div class="image">
+      <div class="image wow animate__animated animate__zoomIn">
         <img src="whyus1.png" alt="Why Us Image">
       </div>
     </div>
   </div>
 </section>
 
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
 
+<!-- WOW.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
