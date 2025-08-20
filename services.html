@@ -19,24 +19,34 @@
     }
 
     /* Navbar Styling */
+    /* Navbar background */
     .navbar {
-      background-color: #212529;
-      padding: 8px 15px;
-      width: 100%;
+      background-color: #100404; /* dark background like your image */
+      padding: 12px 25px;
     }
 
-    /* Navbar links */
+    /* Brand styling */
     .navbar-brand {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: bold;
+      color: white !important;
     }
+    .navbar-brand span {
+      color: #0d6efd; /* Blue for 'e' */
+    }
+
+    /* Nav links */
     .navbar-nav .nav-link {
-      color: white;
-      font-size: 16px;
+      color: #ddd;
+      font-weight: 500;
+      margin: 0 10px;
+      position: relative;
       transition: color 0.3s ease;
     }
-    .navbar-nav .nav-link:hover {
-      color: #ccc;
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #da3636;
     }
 
     /* Services Section */
@@ -52,9 +62,10 @@
     }
 
     .card {
+      top: -20%;
       background: #fff;
       border-radius: 10px;
-      width: 300px;
+      width: 360px;
       padding: 25px;
       box-shadow: 0 45px 20px rgba(0,0,0,0.08);
       position: relative;
@@ -81,9 +92,9 @@
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
+            font-weight: bold;
+            font-size: 58px;
+        }
 
     h3 {
       margin: 10px 0;
@@ -106,7 +117,12 @@
       line-height: 1.5;
       margin-bottom: 40px;
     }
-
+.underline {
+            width: 80px;
+            height: 4px;
+            background-color: #007bff;
+            margin: 0 auto 20px;
+        }
     .arrow {
       position: absolute;
       bottom: 20px;
@@ -125,17 +141,21 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Urban Kicks</a>
+    <!-- Brand on left -->
+    <a class="navbar-brand" href="home.html">Apex Digital</a>
+
+    <!-- Toggle button (mobile menu) -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Nav links on right -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
@@ -144,14 +164,17 @@
   </div>
 </nav>
 
+<!-- Space so content isn't hidden behind fixed navbar -->
+<div style="margin-top: 70px;"></div>
+
 <!-- Services Section -->
 <section class="services py-5">
   <div class="container">
-    <div class="text-center mb-5 wow animate__animated animate__fadeInDown">
-      <h2 class="fw-bold">Services</h2>
-      <div class="underline mx-auto mb-3"></div>
-      <p class="text-muted">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-    </div>
+   <div class="text-center mb-5 wow animate__animated animate__fadeInUp">
+                <h2 class="fw-bold">Services</h2>
+                <div class="underline mx-auto mb-3"></div>
+                <p class="text-muted">Innovating services that deliver measurable results and empower your business to thrive.</p>
+            </div>
 
     <div class="row">
       <!-- Card 1 -->
@@ -159,7 +182,7 @@
         <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
           <div class="icon">🎨</div>
           <h3><strong>Creative</strong> <span class="blue">branding</span></h3>
-          <p>Suspendisse in ultricies ipsum. Nulla commodo sem ac tortor rhoncus, vel volutpat magna varius. Nam porta felis non convallis finibus.</p>
+          <p>Crafting a unique brand goes beyond a logo and colors. We build a cohesive identity that tells your story and connects deeply with your audience.</p>
           <div class="arrow">↗</div>
         </div>
       </div>
@@ -169,7 +192,7 @@
         <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
           <div class="icon">💎</div>
           <h3><strong>Design</strong> <span class="blue">systems</span></h3>
-          <p>Fusce aliquet, nibh ac facilisis viverra, nulla purus aliquet diam, quis consectetur risus dolor a diam. Vivamus convallis lacinia magna.</p>
+          <p>Building a strong design system goes beyond visual style. We create a structured framework that ensures consistency, efficiency, and a unified experience across all platforms.</p>
           <div class="arrow">↗</div>
         </div>
       </div>
@@ -179,7 +202,7 @@
         <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
           <div class="icon">📢</div>
           <h3><strong>Marketing</strong> <span class="blue">strategies</span></h3>
-          <p>Aliquam erat volutpat. Integer at sapien at risus elementum ornare a sit amet odio. Mauris quis magna vel enim pretium maximus.</p>
+          <p>We build robust marketing strategies that connect with your target audience, driving engagement and growth.</p>
           <div class="arrow">↗</div>
         </div>
       </div>
@@ -189,7 +212,7 @@
         <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
           <div class="icon"><span>&lt;/&gt;</span></div>
           <h3><strong>Digital</strong> <span class="blue">platforms</span></h3>
-          <p>Sed in tortor eget lacus gravida dignissim eu sed leo. Etiam sed aliquet massa, id imperdiet purus. Curabitur nec ullamcorper lorem.</p>
+          <p>We craft intuitive digital platforms that connect brands with their audience, providing seamless user experiences. Our solutions are built to be scalable, secure, and ready for future growth.</p>
           <div class="arrow">↗</div>
         </div>
       </div>
@@ -199,7 +222,7 @@
         <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
           <div class="icon">📈</div>
           <h3><strong>Growth</strong> <span class="blue">acceleration</span></h3>
-          <p>Pellentesque faucibus, augue at maximus ultricies, metus velit malesuada elit, vitae tristique lorem dui sed tellus. Integer sed tortor sed.</p>
+          <p>We are your partners in growth acceleration, providing strategic insights and scalable solutions to help your business expand. Our goal is to unlock your full potential and achieve sustainable, long-term success.</p>
           <div class="arrow">↗</div>
         </div>
       </div>
