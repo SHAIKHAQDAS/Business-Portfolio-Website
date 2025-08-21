@@ -1,253 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urban Kicks - Services</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
-
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <!-- Custom CSS -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
-    }
-
-    /* Navbar Styling */
-    /* Navbar background */
-    .navbar {
-      background-color: #100404; /* dark background like your image */
-      padding: 12px 25px;
-    }
-
-    /* Brand styling */
-    .navbar-brand {
-      font-size: 26px;
-      font-weight: bold;
-      color: white !important;
-    }
-    .navbar-brand span {
-      color: #0d6efd; /* Blue for 'e' */
-    }
-
-    /* Nav links */
-    .navbar-nav .nav-link {
-      color: #ddd;
-      font-weight: 500;
-      margin: 0 10px;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active {
-      color: #da3636;
-    }
-
-    /* Services Section */
-    .services {
-      padding: 60px 20px;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .card {
-      top: -20%;
-      background: #fff;
-      border-radius: 10px;
-      width: 360px;
-      padding: 25px;
-      box-shadow: 0 45px 20px rgba(0,0,0,0.08);
-      position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-bottom: 20px;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 50px 25px rgba(0,0,0,0.15);
-    }
-
-    .icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 30%;
-      background: #eaf3ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      color: #007bff;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-            font-weight: bold;
-            font-size: 58px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        /*
+         * Custom CSS to match the navbar from the 'About Us' page
+         */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
         }
 
-    h3 {
-      margin: 10px 0;
-      font-size: 1.2rem;
-      font-weight: normal;
-    }
+        .navbar {
+            background-color: #100404;
+            padding: 12px 25px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-brand {
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+        }
 
-    h3 strong {
-      font-weight: bold;
-      color: #222;
-    }
+        .navbar-nav .nav-link {
+            color: #ddd;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
 
-    h3 .blue {
-      color: #007bff;
-    }
-
-    p {
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.5;
-      margin-bottom: 40px;
-    }
-.underline {
+        .navbar-nav .nav-link:hover {
+            color: #da3636;
+        }
+        
+        /* Custom styles for the section heading underline */
+        .underline {
             width: 80px;
             height: 4px;
-            background-color: #007bff;
-            margin: 0 auto 20px;
+            background-color: #222427;
         }
-    .arrow {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      background: #dadada;
-      color: #007bff;
-      font-size: 18px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  </style>
+
+        /*
+         * Custom CSS to match the services cards' design and animations
+         */
+        .card-hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .card-hover-effect:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+        }
+
+        .arrow {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #1a1a1a;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover .arrow {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+    </style>
 </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container-fluid">
-    <!-- Brand on left -->
-    <a class="navbar-brand" href="home.html">Apex Digital</a>
 
-    <!-- Toggle button (mobile menu) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- Navbar - Copied directly from the provided About Us page -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid flex items-center justify-between">
+            <!-- Brand on left -->
+            <a class="navbar-brand" href="/index.html">Apex Digital</a>
 
-    <!-- Nav links on right -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+            <!-- Nav links on right -->
+            <div class="hidden md:block">
+                <ul class="navbar-nav flex space-x-4">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-[#da3636]" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Space so content isn't hidden behind fixed navbar -->
+    <div class="pt-20 lg:pt-24"></div>
 
-<!-- Space so content isn't hidden behind fixed navbar -->
-<div style="margin-top: 70px;"></div>
-
-<!-- Services Section -->
-<section class="services py-5">
-  <div class="container">
-   <div class="text-center mb-5 wow animate__animated animate__fadeInUp">
-                <h2 class="fw-bold">Services</h2>
-                <div class="underline mx-auto mb-3"></div>
-                <p class="text-muted">Innovating services that deliver measurable results and empower your business to thrive.</p>
+    <!-- Services Section -->
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <!-- Heading -->
+            <div class="text-center mb-10 wow animate__animated animate__fadeInUp">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Services</h2>
+                <div class="underline mx-auto mt-2"></div>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">We provide innovative solutions to help your business thrive in the digital world.</p>
             </div>
 
-    <div class="row">
-      <!-- Card 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-          <div class="icon">🎨</div>
-          <h3><strong>Creative</strong> <span class="blue">branding</span></h3>
-          <p>Crafting a unique brand goes beyond a logo and colors. We build a cohesive identity that tells your story and connects deeply with your audience.</p>
-          <div class="arrow">↗</div>
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Service Card 1 -->
+                <div class="wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full service-card card-hover-effect flex flex-col">
+                        <div class="text-4xl mb-3 text-blue-600">🎨</div>
+                        <h5 class="text-lg font-bold mb-1 text-gray-800">Creative branding</h5>
+                        <p class="text-gray-500 mb-4">Crafting a unique brand goes beyond a logo and colors. We build a cohesive identity that tells your story and connects deeply with your audience.</p>
+                        <a href="creativebranding.html" class="mt-auto">
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full service-card card-hover-effect flex flex-col">
+                        <div class="text-4xl mb-3 text-blue-600">💎</div>
+                        <h5 class="text-lg font-bold mb-1 text-gray-800">Design systems</h5>
+                        <p class="text-gray-500 mb-4">Building a strong design system goes beyond visual style. We create a structured framework that ensures consistency, efficiency, and a unified experience across all platforms.</p>
+                        <a href="designsystem.html" class="mt-auto">
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full service-card card-hover-effect flex flex-col">
+                        <div class="text-4xl mb-3 text-blue-600">📢</div>
+                        <h5 class="text-lg font-bold mb-1 text-gray-800">Marketing strategies</h5>
+                        <p class="text-gray-500 mb-4">We build robust marketing strategies that connect with your target audience, driving engagement and growth.</p>
+                        <a href="marketingstratergies.html" class="mt-auto">
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full service-card card-hover-effect flex flex-col">
+                        <div class="text-4xl mb-3 text-blue-600">🖥️</div>
+                        <h5 class="text-lg font-bold mb-1 text-gray-800">Digital platforms</h5>
+                        <p class="text-gray-500 mb-4">We craft intuitive digital platforms that connect brands with their audience, providing seamless user experiences. Our solutions are built to be scalable, secure, and ready for future growth.</p>
+                        <a href="digitalplatform.html" class="mt-auto">
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full service-card card-hover-effect flex flex-col">
+                        <div class="text-4xl mb-3 text-blue-600">📈</div>
+                        <h5 class="text-lg font-bold mb-1 text-gray-800">Growth acceleration</h5>
+                        <p class="text-gray-500 mb-4">We are your partners in growth acceleration, providing strategic insights and scalable solutions to help your business expand. Our goal is to unlock your full potential and achieve sustainable, long-term success.</p>
+                        <a href="growthaceeleration.html" class="mt-auto">
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full service-card card-hover-effect flex flex-col">
+                        <div class="text-4xl mb-3 text-blue-600">🎥</div>
+                        <h5 class="text-lg font-bold mb-1 text-gray-800">Media solutions</h5>
+                        <p class="text-gray-500 mb-4">Morbi dapibus metus ac condimentum pellentesque. Curabitur eget dictum lacus. Cras et augue vitae ex dictum tincidunt quis quis tellus.</p>
+                        <a href="mediasolutions.html" class="mt-auto">
+                            <span class="arrow">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Card 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-          <div class="icon">💎</div>
-          <h3><strong>Design</strong> <span class="blue">systems</span></h3>
-          <p>Building a strong design system goes beyond visual style. We create a structured framework that ensures consistency, efficiency, and a unified experience across all platforms.</p>
-          <div class="arrow">↗</div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
-          <div class="icon">📢</div>
-          <h3><strong>Marketing</strong> <span class="blue">strategies</span></h3>
-          <p>We build robust marketing strategies that connect with your target audience, driving engagement and growth.</p>
-          <div class="arrow">↗</div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-          <div class="icon"><span>&lt;/&gt;</span></div>
-          <h3><strong>Digital</strong> <span class="blue">platforms</span></h3>
-          <p>We craft intuitive digital platforms that connect brands with their audience, providing seamless user experiences. Our solutions are built to be scalable, secure, and ready for future growth.</p>
-          <div class="arrow">↗</div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-          <div class="icon">📈</div>
-          <h3><strong>Growth</strong> <span class="blue">acceleration</span></h3>
-          <p>We are your partners in growth acceleration, providing strategic insights and scalable solutions to help your business expand. Our goal is to unlock your full potential and achieve sustainable, long-term success.</p>
-          <div class="arrow">↗</div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
-          <div class="icon">🎥</div>
-          <h3><strong>Media</strong> <span class="blue">solutions</span></h3>
-          <p>Morbi dapibus metus ac condimentum pellentesque. Curabitur eget dictum lacus. Cras et augue vitae ex dictum tincidunt quis quis tellus.</p>
-          <div class="arrow">↗</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
-
-  <!-- WOW.js for scroll animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>

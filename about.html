@@ -1,90 +1,110 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>About Us</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <title>About Us</title>
+
+    <style>
+      /* Navbar */
+      .navbar {
+        background-color: #100404;
+        padding: 12px 25px;
+      }
+      .navbar-brand {
+        font-size: 26px;
+        font-weight: bold;
+        color: white !important;
+      }
+      .navbar-nav .nav-link {
+        color: #ddd !important;
+        font-weight: 500;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #da3636 !important;
+      }
+      /* Page spacing (for fixed navbar) */
+      .page-spacing {
+        padding-top: 100px;
+      }
+      /* Section underline */
+      .underline {
+        width: 80px;
+        height: 4px;
+        background-color: #007bff;
+      }
+    </style>
   </head>
-  <body>
-    <link rel="stylesheet" href="style.css">
+  <body class="font-inter">
 
     <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container-fluid">
-    <!-- Brand on left -->
-     <a class="navbar-brand" href="home.html">Apex Digital</a>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Apex Digital</a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <!-- Toggle button (mobile menu) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Nav links on right -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-     <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Space so content isn't hidden behind fixed navbar -->
-<div style="margin-top: 70px;"></div>
-    <!-- About Us Heading -->
-    <div class="text-center mb-5 wow animate__animated animate__fadeInDown">
-      <h2 class="fw-bold">About Us</h2>
-      <div class="underline mx-auto mb-3"></div>
-      <p class="text-muted">Building on a foundation of trust and experience, we craft solutions that drive your business forward.</p>
-    </div>
+    <!-- Spacing for fixed navbar -->
+    <div class="page-spacing"></div>
 
     <!-- About Section -->
-    <section class="about-section d-flex flex-wrap align-items-center mt-5">
-      <div class="about-content col-md-6 wow animate__animated animate__fadeInLeft">
-        <h4>More About Us</h4>
-        <h2>Building Trust with Experience</h2>
-        <p>
-          Your success is the ultimate measure of our work. We take the time to deeply understand your business, your goals, and your audience. By working closely with you, we create tailor-made solutions that are not only effective but also sustainable. We are more than a service provider; we are your strategic partner.
-        </p>
-
-        <ul class="features">
-          <li>Professional business solutions</li>
-          <li>Trusted by clients worldwide</li>
-          <li>Years of industry experience</li>
-          <li>Focused on innovation</li>
-          <li>Customer-first approach</li>
-          <li>Reliable and scalable services</li>
-        </ul>
-
-        <a href="about.html" class="about-btn btn btn-dark wow animate__animated animate__fadeInUp">Learn More</a>
+    <div class="py-12">
+      <div class="text-center mb-10 animate__animated animate__fadeInDown">
+        <h2 class="text-3xl md:text-4xl fw-bold text-dark">About Us</h2>
+        <div class="underline mx-auto mt-2"></div>
+        <p class="text-muted mt-4">Building on a foundation of trust and experience, we craft solutions that drive your business forward.</p>
       </div>
 
-      <div class="about-image col-md-6 text-center wow animate__animated animate__fadeInRight">
-        <img src="aboutus1.png" alt="About Us" class="img-fluid">
-      </div>
-    </section>
+      <section class="container my-5 animate__animated animate__fadeInUp">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h4 class="text-primary fw-semibold mb-2">More About Us</h4>
+            <h2 class="h3 fw-bold text-dark mb-4">Building Trust with Experience</h2>
+            <p class="text-muted mb-4">
+              Your success is the ultimate measure of our work. We take the time to deeply understand your business, your goals, and your audience. By working closely with you, we create tailor-made solutions that are not only effective but also sustainable.
+            </p>
+            <ul class="list-unstyled text-muted">
+              <li>✔ Professional business solutions</li>
+              <li>✔ Trusted by clients worldwide</li>
+              <li>✔ Years of industry experience</li>
+              <li>✔ Focused on innovation</li>
+              <li>✔ Customer-first approach</li>
+              <li>✔ Reliable and scalable services</li>
+            </ul>
+            <a href="/about.html" class="btn btn-primary mt-3">Learn More</a>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="aboutus1.png" alt="About Us" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+      </section>
+    </div>
 
-    <!-- JS Libraries -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <!-- WOW.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
   </body>
 </html>
