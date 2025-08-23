@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Apex Digital</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 60px;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #100404;
+            padding: 12px 25px;
+        }
+
+        .navbar-brand {
+            font-size: 26px;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ddd !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #da3636 !important;
+        }
+
+        /* Featured Stories Header */
+        .featured-header {
+            text-align: center;
+            margin: 3rem 0;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #100404;
+            position: relative;
+        }
+
+        .featured-header:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #007bff;
+            margin: 15px auto;
+        }
+
+        /* Service Cards */
+        .services-grid {
+            max-width: 1280px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 1px solid #f3f4f6;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(218, 54, 54, 0.85);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-img-container {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .card-img-container img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            color: #100404;
+            line-height: 1.3;
+        }
+
+        .card-text {
+            color: #555;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+            margin-top: auto;
+        }
+
+        .read-more {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #1a1a1a;
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+        
+        .service-card:hover .read-more {
+            background-color: #da3636;
+            transform: translateX(5px);
+        }
+
+        /* Keyframe animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Apex Digital</a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="container my-5">
+        <!-- Header -->
+        <h1 class="featured-header">Our Services</h1>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card wow animate__animated animate__fadeInUp">
+                <div class="card-img-container">
+                    
+                    <img src="creativebranding.png" alt="Creative Branding">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Creative Branding </h3>
+                    <p class="card-text">Creative branding is a continuous effort to make a brand feel new and exciting.</p>
+                    <div class="card-meta">
+                        
+                    </div>
+                </div>
+                <div class="read-more" onclick="goToService('servicedetails.html?service=creative-branding')">&rarr;</div>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                <div class="card-img-container">
+                    
+                    <img src="designsystems.png" alt="Design Systems">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Design Systems </h3>
+                    <p class="card-text">A design system is a comprehensive set of standards, reusable components, and guidelines that helps teams build digital products at scale. </p>
+                    <div class="card-meta">
+                        
+                    </div>
+                </div>
+                <div class="read-more" onclick="goToService('servicedetails.html?service=design-systems')">&rarr;</div>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <div class="card-img-container">
+                    
+                    <img src="digitalplatform.png" alt="Digital Platforms">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Digital Platforms </h3>
+                    <p class="card-text">A digital platform is a business model that creates value by facilitating interactions between two or more interdependent groups, such as consumers and producers.</p>
+                    <div class="card-meta">
+                        
+                    </div>
+                </div>
+                <div class="read-more" onclick="goToService('servicedetails.html?service=digital-platforms')">&rarr;</div>
+            </div>
+    
+            <!-- Service Card 4 -->
+            <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                <div class="card-img-container">
+                    
+                    <img src="growthacceleration.png" alt="Growth Acceleration">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Growth Acceleration </h3>
+                    <p class="card-text">Growth acceleration is the process of rapidly increasing a company's revenue, market share, and overall performance.</p>
+                    <div class="card-meta">
+                        
+                    </div>
+                </div>
+                <div class="read-more" onclick="goToService('servicedetails.html?service=growth-acceleration')">&rarr;</div>
+            </div>
+    
+            <!-- Service Card 5 -->
+            <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                <div class="card-img-container">
+                    
+                    <img src="marketingstrategies.png" alt="Marketing Strategies">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Marketing Strategies </h3>
+                    <p class="card-text"> We build robust marketing strategies that connect with your target audience, driving engagement and growth.</p>
+                    <div class="card-meta">
+                        
+                    </div>
+                </div>
+                <div class="read-more" onclick="goToService('servicedetails.html?service=marketing-strategies')">&rarr;</div>
+            </div>
+    
+            <!-- Service Card 6 -->
+            <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                <div class="card-img-container">
+                    
+                    <img src="mediasolutions.png" alt="Media Solutions">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"> Media Solutions</h3>
+                    <p class="card-text">Media solutions encompass the strategic application of technology and creative content to connect with an audience. </p>
+                    <div class="card-meta">
+                        
+                    </div>
+                </div>
+                <div class="read-more" onclick="goToService('servicedetails.html?service=media-solutions')">&rarr;</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        /**
+         * A function to navigate to a new URL.
+         * @param {string} url The URL to navigate to.
+         */
+        function goToService(url) {
+            window.location.assign(url);
+        }
+    </script>
+</body>
+</html>
