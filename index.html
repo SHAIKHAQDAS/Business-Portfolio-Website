@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Digital</title>
-    <!-- Bootstrap CSS - Corrected to use a single version -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Inter Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Kinetic Arts</title>
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
          body {
             font-family: 'Inter', sans-serif;
@@ -22,26 +24,18 @@
 
         /* Navbar - using custom CSS for a specific color and padding */
         .navbar {
-            background-color: #100404;
-            padding: 12px 25px;
-        }
-
-        .navbar-brand {
-            font-size: 26px;
-            font-weight: bold;
-            color: white !important;
-        }
-
-        .navbar-nav .nav-link {
-            color: #ddd !important;
-            font-weight: 500;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #da3636 !important;
-        }
+  background-color: #100404 !important;
+  padding: 12px 25px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #ddd !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #da3636 !important;
+}
         
         /* Custom styles for the sections, replacing Tailwind classes */
         .underline {
@@ -62,7 +56,7 @@
             justify-content: space-between;
             padding: 2rem;
             background-color: white;
-           
+           margin-top: 50px;
             animation-name: fadeInUp;
             animation-duration: 1s;
         }
@@ -125,6 +119,7 @@
         .hero-image img {
             width: 100%;
             height: auto;
+            margin-top: 40px;
             border-radius: 0.75rem;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
@@ -365,6 +360,8 @@
             justify-content: center;
             align-items: center;
             width: 40px;
+            margin-left: 25px;
+            margin-bottom: 20px;
             height: 40px;
             border-radius: 50%;
             background-color: #1a1a1a;
@@ -426,80 +423,224 @@
         }
         
 /* Grid specific to Advanced Capabilities and Why Us sections */
-        .capabilities-grid, .why-us-grid {
-            max-width: 1280px;
-           margin-bottom: 30%;
-            width: 100%;
-            margin: auto;
-            margin-bottom: 5%;
-            display: grid;
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-            gap: 1.5rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
+         /* Custom font for a professional look */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+   .advanced-capabilities-section, .why-us-section {
+        background-color: #f9fafb;
+        padding: 5rem 0;
+    }
 
-        @media (min-width: 640px) {
-            .capabilities-grid, .why-us-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
+    .capabilities-title  {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-left: 1rem;
+        margin-top: -50px;
+        padding-right: 1rem;
+    }
+    .why-us-section {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-left: 1rem;
+        margin-bottom: -50px;
+        padding-right: 1rem;
+    }
+
+    .capabilities-title h2, .why-us-section h2 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 0;
+    }
+    
+    .divider {
+        height: 0.25rem;
+        width: 5rem;
+        background-color: #2563eb;
+        border-radius: 9999px;
+        margin: 1rem auto;
+    }
+
+    .capabilities-title p, .why-us-section p {
+        color: #6b7280;
+        margin-top: 1rem;
+        max-width: 42rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mt-section-space {
+        margin-top: 5rem;
+    }
+
+    .capabilities-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        max-width: 80rem; /* Increased max-width for wider cards */
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    @media (min-width: 640px) {
+        .capabilities-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
-        
-/* Two-column layout for the Why Us section */
+    }
+    @media (min-width: 1024px) {
+    .capabilities-grid {
+        grid-template-columns: repeat(2, 1fr); /* Set to 2 columns for wider cards on desktop */
+    }
+}
+
+    .capability-card, .why-us-card {
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 2rem;
+        margin-bottom: -10px;
+        border-radius: 1rem;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .capability-card:hover, .why-us-card:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .capability-card-number, .why-us-card-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #2563eb;
+    }
+
+    .capability-card-tag {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+    }
+
+    .capability-card-content, .why-us-card-content {
+        position: relative;
+        z-index: 10;
+    }
+
+    .capability-card-content h4, .why-us-card-content h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .capability-card-content p, .why-us-card-content p {
+        color: #4b5563;
+        font-size: 1rem;
+    }
+
+    .capability-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    .capability-list li {
+        color: #4b5563;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+    }
+
+    .check-icon {
+        color: #10b981;
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+    }
+
+    .tag-blue { background-color: #dbeafe; color: #2563eb; }
+    .tag-green { background-color: #d1fae5; color: #10b981; }
+    .tag-yellow { background-color: #fef3c7; color: #f59e0b; }
+    .tag-gray { background-color: #f3f4f6; color: #6b7280; }
+
+    .why-us-container {
+        max-width: 1280px;
+        margin: auto;
+        margin-bottom: -10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    @media (min-width: 768px) {
         .why-us-container {
-            max-width: 1280px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-        
-        /* Apply a 2-column layout on medium screens and up */
-        @media (min-width: 768px) {
-            .why-us-container {
-                flex-direction: row;
-            }
-
-            .why-us-cards {
-                width: 60%;
-            }
-
-            .why-us-image {
-                width: 40%;
-            }
+            flex-direction: row;
+            justify-content: space-between;
         }
 
-        /* Adjust the why-us-grid for the new two-column layout */
-        .why-us-grid {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-            gap: 1.5rem;
+        .why-us-cards {
+            width: 70%; /* Increased width for cards */
         }
 
-        @media (min-width: 640px) {
-            .why-us-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-        
         .why-us-image {
-            width: 100%;
+            width: 30%; /* Decreased width for image */
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 0;
         }
+    }
 
-        .why-us-image img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10%;
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    .why-us-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+
+    @media (min-width: 640px) {
+        .why-us-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
+    }
+    
+    .why-us-image {
+        width: 60%;
+        height: 10vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+    }
+
+    .why-us-img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
 
 
         /* Footer */
@@ -582,39 +723,44 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Apex Digital</a>
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <!-- Corrected 'active' class to be on the Home link -->
-                    <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/SerciceDetails.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #100404;">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <img src="logo.png" alt="Kinatic Arts Logo" style="height:40px;width:50px;" class="me-2"/>
+      KINATIC ARTS
+    </a>
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- Heading / Hero -->
 <div class="hero wow animate__animated animate__fadeInUp">
     <div class="hero-text wow animate__animated animate__fadeInLeft">
         <h3>
-            Bringing Ideas to Life Through Creative Design.
+            Bringing Ideas to Life Through Designing
         </h3>
-        <p>Welcome to my portfolio — a showcase of my work, skills, and passion for delivering creative and reliable digital solutions. From designing clean, user-friendly websites to building impactful projects, I focus on helping businesses and ideas grow with technology. Explore my work and discover how I can add value to your vision.</p>
+        <p>We are a creative design agency dedicated to helping brands stand out. We specialize in crafting memorable visual identities and engaging digital experiences. Our team transforms ideas into compelling designs that resonate with your audience. We're passionate about innovation, storytelling, and delivering results. Partner with us to bring your vision to life./p>
         <div class="hero-buttons">
             <a href="/contact.html">
-                <button class="btn-primary">Get a Free Consultation</button>
+                <button class="btn-primary">Join Us </button>
             </a>
-            <a href="/SerciceDetails.html">
-                <button class="btn-secondary">Our Services</button>
+            <a href="/service.html">
+                <button class="btn-secondary">what we Provide</button>
             </a>
         </div>
     </div>
@@ -666,23 +812,24 @@
     
     <div class="services-grid">
             <!-- Service Card 1 -->
-            <a href="servicedetails.html?service=creative-branding" class="service-card wow animate__animated animate__fadeInUp">
+             <!-- Service Card 1 -->
+            <div class="service-card wow animate__animated animate__fadeInUp">
                 <div class="card-img-container">
                     
                     <img src="creativebranding.png" alt="Creative Branding">
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Creative Branding </h3>
-                    <p class="card-text">Creative branding is a continuous effort to make a brand feel new and exciting.</p>
+                    <p class="card-text">Creative branding is a continuous effort to make a brand feel new and exciting.By pushing creative boundaries, a brand can establish itself as a thought leader</p>
                     <div class="card-meta">
-                       
+                        
                     </div>
                 </div>
-                <div class="read-more">&rarr;</div>
-            </a>
+                <div class="read-more" onclick="goToService('servicedetails.html?service=creative-branding')">&rarr;</div>
+            </div>
             
             <!-- Service Card 2 -->
-            <a href="servicedetails.html?service=design-systems" class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+            <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
                 <div class="card-img-container">
                     
                     <img src="designsystems.png" alt="Design Systems">
@@ -691,27 +838,27 @@
                     <h3 class="card-title">Design Systems </h3>
                     <p class="card-text">A design system is a comprehensive set of standards, reusable components, and guidelines that helps teams build digital products at scale. </p>
                     <div class="card-meta">
-                       
+                        
                     </div>
                 </div>
-                <div class="read-more">&rarr;</div>
-            </a>
+                <div class="read-more" onclick="goToService('servicedetails.html?service=design-systems')">&rarr;</div>
+            </div>
             
             <!-- Service Card 3 -->
-            <a href="servicedetails.html?service=digital-platforms" class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                 <div class="card-img-container">
-                   
+                    
                     <img src="digitalplatform.png" alt="Digital Platforms">
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Digital Platforms </h3>
-                  <p class="card-text">A digital platform is a business model that creates value by facilitating interactions between two or more interdependent groups, such as consumers and producers.</p>
+                    <p class="card-text">A digital platform is a business model that creates value by facilitating interactions between two or more interdependent groups, such as consumers and producers.</p>
                     <div class="card-meta">
                         
                     </div>
                 </div>
-                <div class="read-more">&rarr;</div>
-            </a>
+                <div class="read-more" onclick="goToService('servicedetails.html?service=digital-platforms')">&rarr;</div>
+            </div>
     </div>
     
     <!-- "Know More Our Services" button -->
@@ -726,78 +873,84 @@
 </section>
 
 <!-- Advanced Capabilities Section -->
-<section class="services-section">
-    <div class="text-center mb-10 wow animate__animated animate__fadeInUp">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Advanced Capabilities</h2>
-        <div class="underline mx-auto mt-2"></div>
-        <p class="text-gray-500 mt-4">Discover powerful features designed to elevate your business operations to the next level of excellence.</p>
+<section class="advanced-capabilities-section">
+   <!-- Advanced Capabilities Section -->
+    <div class="capabilities-title wow animate__animated animate__fadeInUp">
+        <h2>Advanced Capabilities</h2>
+        <div class="divider"></div>
+        <p>Discover powerful features designed to elevate your business operations to the next level of excellence.</p>
     </div>
     
     <div class="capabilities-grid">
         <!-- Card 1 -->
-        <div class="service-card wow animate__animated animate__fadeInUp">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
-                <span style="font-size: 2.25rem; font-weight: 800; color: #2563eb;">01</span>
-                <span style="background-color: #dbeafe; color: #2563eb; font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.75rem; border-radius: 9999px;">ENTERPRISE</span>
+        <div class="capability-card relative wow animate__animated animate__fadeInUp">
+            <div class="card-header">
+                <h3 class="capability-card-number">01</h3>
+                <span class="capability-card-tag tag-blue">ENTERPRISE</span>
             </div>
-            <h5 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Automated Workflow Engine</h5>
-            <p style="color: #4b5563; margin-bottom: 1rem;">Streamline complex business processes with intelligent automation that adapts to your organizational needs.</p>
-            <ul style="list-style-type: disc; list-style-position: inside; margin-top: 1rem; color: #374151; font-size: 0.875rem;">
-                <li>Process Optimization</li>
-                <li>Error Reduction</li>
-            </ul>
+            <div class="capability-card-content">
+                <h4>Automated Workflow Engine</h4>
+                <p>Streamline complex business processes with intelligent automation that adapts to your organizational needs.</p>
+                <ul class="capability-list">
+                    <li><i class="check-icon">✓</i> Process Optimization</li>
+                    <li><i class="check-icon">✓</i> Error Reduction</li>
+                </ul>
+            </div>
         </div>
         
         <!-- Card 2 -->
-        <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
-                <span style="font-size: 2.25rem; font-weight: 800; color: #2563eb;">02</span>
-                <span style="background-color: #d1fae5; color: #10b981; font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.75rem; border-radius: 9999px;">PREMIUM</span>
+        <div class="capability-card relative wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="card-header">
+                <h3 class="capability-card-number">02</h3>
+                <span class="capability-card-tag tag-green">PREMIUM</span>
             </div>
-            <h5 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Real-time Collaboration</h5>
-            <p style="color: #4b5563; margin-bottom: 1rem;">Enable seamless teamwork with synchronized data sharing and instant communication across all platforms.</p>
-            <ul style="list-style-type: disc; list-style-position: inside; margin-top: 1rem; color: #374151; font-size: 0.875rem;">
-                <li>Live Updates</li>
-                <li>Team Sync</li>
-            </ul>
+            <div class="capability-card-content">
+                <h4>Real-time Collaboration</h4>
+                <p>Enable seamless teamwork with synchronized data sharing and instant communication across all platforms.</p>
+                <ul class="capability-list">
+                    <li><i class="check-icon">✓</i> Live Updates</li>
+                    <li><i class="check-icon">✓</i> Team Sync</li>
+                </ul>
+            </div>
         </div>
         
         <!-- Card 3 -->
-        <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
-                <span style="font-size: 2.25rem; font-weight: 800; color: #2563eb;">03</span>
-                <span style="background-color: #fef3c7; color: #f59e0b; font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.75rem; border-radius: 9999px;">STANDARD</span>
+        <div class="capability-card relative wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+            <div class="card-header">
+                <h3 class="capability-card-number">03</h3>
+                <span class="capability-card-tag tag-yellow">STANDARD</span>
             </div>
-            <h5 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Predictive Intelligence</h5>
-            <p style="color: #4b5563; margin-bottom: 1rem;">Leverage machine learning algorithms to forecast trends and make data-driven strategic decisions.</p>
-            <ul style="list-style-type: disc; list-style-position: inside; margin-top: 1rem; color: #374151; font-size: 0.875rem;">
-                <li>Trend Analysis</li>
-                <li>Risk Assessment</li>
-            </ul>
+            <div class="capability-card-content">
+                <h4>Predictive Intelligence</h4>
+                <p>Leverage machine learning algorithms to forecast trends and make data-driven strategic decisions.</p>
+                <ul class="capability-list">
+                    <li><i class="check-icon">✓</i> Trend Analysis</li>
+                    <li><i class="check-icon">✓</i> Risk Assessment</li>
+                </ul>
+            </div>
         </div>
         
         <!-- Card 4 -->
-        <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
-                <span style="font-size: 2.25rem; font-weight: 800; color: #2563eb;">04</span>
-                <span style="background-color: #f3f4f6; color: #6b7280; font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.75rem; border-radius: 9999px;">COMING SOON</span>
+        <div class="capability-card relative wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+            <div class="card-header">
+                <h3 class="capability-card-number">04</h3>
+                <span class="capability-card-tag tag-gray">COMING SOON</span>
             </div>
-            <h5 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Cloud Scalability</h5>
-            <p style="color: #4b5563; margin-bottom: 1rem;">Dynamic resource allocation ensures optimal performance during peak usage while maintaining cost efficiency.</p>
-            <ul style="list-style-type: disc; list-style-position: inside; margin-top: 1rem; color: #374151; font-size: 0.875rem;">
-                <li>Auto Scaling</li>
-                <li>Cost Optimization</li>
-            </ul>
+            <div class="capability-card-content">
+                <h4>Cloud Scalability</h4>
+                <p>Dynamic resource allocation ensures optimal performance during peak usage while maintaining cost efficiency.</p>
+                <ul class="capability-list">
+                    <li><i class="check-icon">✓</i> Auto Scaling</li>
+                    <li><i class="check-icon">✓</i> Cost Optimization</li>
+                </ul>
+            </div>
         </div>
     </div>
-</section>
-
 <!-- Why Us Section -->
-<section class="services-section">
-    <div class="text-center mb-10 wow animate__animated animate__fadeInUp">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Why Us</h2>
-        <div class="underline mx-auto mt-2"></div>
-        <p class="text-gray-500 mt-4">We don't just build websites; we create digital experiences that drive growth and deliver real business value. </p>
+    <div class="why-us-section mt-section-space wow animate__animated animate__fadeInUp">
+        <h2>Why Choose Us</h2>
+        <div class="divider"></div>
+        <p>We don't just build websites; we create digital experiences that drive growth and deliver real business value.</p>
     </div>
     
     <div class="why-us-container">
@@ -805,35 +958,43 @@
         <div class="why-us-cards">
             <div class="why-us-grid">
                 <!-- Card 1 -->
-                <div class="service-card wow animate__animated animate__fadeInLeft">
-                    <h3 style="font-size: 1.875rem; font-weight: 800; color: #2563eb; margin-bottom: 0.5rem;">01</h3>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">What's our focus?</h4>
-                    <p style="color: #4b5563; font-size: 0.875rem;">We focus on results, not just services. Our solutions are crafted with a clear objective to deliver tangible value and a strong return on your investment.</p>
+                <div class="why-us-card relative wow animate__animated animate__fadeInLeft">
+                    <h3 class="why-us-card-number">01</h3>
+                    <div class="why-us-card-content">
+                        <h4>Our Focus</h4>
+                        <p>We focus on results, not just services. Our solutions are crafted with a clear objective to deliver tangible value and a strong return on your investment.</p>
+                    </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="service-card wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
-                    <h3 style="font-size: 1.875rem; font-weight: 800; color: #2563eb; margin-bottom: 0.5rem;">02</h3>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">How do we work?</h4>
-                    <p style="color: #4b5563; font-size: 0.875rem;">We collaborate closely with you, treating your business as our own. Our transparent and agile process ensures you are part of every step, from concept to launch.</p>
+                <div class="why-us-card relative wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+                    <h3 class="why-us-card-number">02</h3>
+                    <div class="why-us-card-content">
+                        <h4>Our Process</h4>
+                        <p>We collaborate closely with you, treating your business as our own. Our transparent and agile process ensures you are part of every step, from concept to launch.</p>
+                    </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="service-card wow animate__animated animate__fadeInLeft" data-wow-delay="0.4s">
-                    <h3 style="font-size: 1.875rem; font-weight: 800; color: #2563eb; margin-bottom: 0.5rem;">03</h3>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Who are our clients?</h4>
-                    <p style="color: #4b5563; font-size: 0.875rem;">Our clients range from startups to Fortune 500 companies. We work with businesses of all sizes to help them grow and succeed in a competitive digital landscape.</p>
+                <div class="why-us-card relative wow animate__animated animate__fadeInLeft" data-wow-delay="0.4s">
+                    <h3 class="why-us-card-number">03</h3>
+                    <div class="why-us-card-content">
+                        <h4>Our Clients</h4>
+                        <p>Our clients range from startups to Fortune 500 companies. We work with businesses of all sizes to help them grow and succeed in a competitive digital landscape.</p>
+                    </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="service-card wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
-                    <h3 style="font-size: 1.875rem; font-weight: 800; color: #2563eb; margin-bottom: 0.5rem;">04</h3>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">What’s our promise?</h4>
-                    <p style="color: #4b5563; font-size: 0.875rem;">We promise to deliver exceptional quality and unwavering support. Your satisfaction is our top priority, and we're committed to building a partnership you can trust.</p>
+                <div class="why-us-card relative wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
+                    <h3 class="why-us-card-number">04</h3>
+                    <div class="why-us-card-content">
+                        <h4>Our Promise</h4>
+                        <p>We promise to deliver exceptional quality and unwavering support. Your satisfaction is our top priority, and we're committed to building a partnership you can trust.</p>
+                    </div>
                 </div>
             </div>
         </div>
         
         <!-- Right side: Image -->
         <div class="why-us-image wow animate__animated animate__fadeInRight">
-            <img src="whyus.png" alt="Why Choose Us">
+            <img class="why-us-img" src="whyus.png" alt="Why Choose Us">
         </div>
     </div>
 </section>
@@ -872,7 +1033,7 @@
         <div class="footer-section">
             <h5 style="font-size: 1.125rem;">Contact Us</h5>
             <ul class="footer-contact">
-                <li><i class="bi bi-geo-alt-fill"></i>1-28-18, aURANGABAD, 431001</li>
+                <li><i class="bi bi-geo-alt-fill"></i>1-28-18, AURANGABAD, 431001</li>
                 <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@apexdigital.com">shaikhaqdas223119@gmail.com</a></li>
                 <li><i class="bi bi-phone-fill"></i>+91 8830900128</li>
             </ul>
@@ -893,6 +1054,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     new WOW().init();
+     function goToService(url) {
+            window.location.assign(url);
+        }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initializes the WOW.js library for scroll animations.
+        new WOW().init();
+    });
 </script>
 </body>
 </html>
