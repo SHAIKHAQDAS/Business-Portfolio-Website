@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Details - Kinetic Arts</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 60px;
+        }
+
+      /* Navbar */
+        .navbar {
+            background-color: #100404 !important;
+            padding: 12px 25px;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ddd !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #da3636 !important;
+        }
+        
+
+        /* Sidebar Cards */
+        .sidebar-card,
+        .sidebar-card1,
+        .contact-box,
+        .content {
+            /* Animation base class for all components */
+            animation: fadeIn 1s ease-out;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        .sidebar-card1 {
+            background: #ffffff;
+            border-radius: 6px;
+            box-shadow: 0 12px 12px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-top: 15%;
+            margin-bottom: 20px;
+            animation-delay: 0.2s;
+        }
+
+        .sidebar-card {
+            background: #ffffff;
+            border-radius: 6px;
+            box-shadow: 0 12px 12px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-bottom: 20px;
+            animation-delay: 0.4s;
+        }
+
+        .sidebar-card h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* List group hover and animation effect */
+        .list-group-item {
+            border: none;
+            border-radius: 0;
+            padding: 12px 15px;
+            font-size: 15px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .list-group-item:hover:not(.active) {
+            background-color: #e9ecef;
+        }
+
+        .list-group-item.active {
+            background-color: #0d6efd;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* Catalog icons */
+        .catalog-icon {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Content area */
+        .content {
+            animation-delay: 0.6s;
+        }
+
+        .content img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            margin-top: 7%;
+        }
+
+        .content h3 {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #063b3d;
+        }
+
+        .content p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        /* New contact box styling */
+        .contact-box {
+            background: #2563EB;
+            border-radius: 6px;
+            box-shadow: 0 12px 12px rgba(0, 0, 0, 0.05);
+            padding: 40px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+            animation-delay: 0.8s;
+        }
+
+        .contact-box .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-box h4 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        /* Keyframe animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Back to services button */
+        .back-to-services {
+            margin-bottom: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            color: #0d6efd;
+            font-weight: 500;
+        }
+
+        .back-to-services:hover {
+            color: #0a58ca;
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #100404;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Kinatic Arts Logo" style="height:40px;width:50px;" >
+                KINATIC ARTS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="container my-5">
+        <!-- Back button -->
+        <div class="back-to-services" id="back-button" onclick="window.location.href='portfolio.html'">
+            <i class="bi bi-arrow-left me-2"></i> Back to portfolio
+        </div>
+
+        <!-- Project Details Sections -->
+        <div id="project-details">
+            <!-- Aura Brand Section -->
+            <div class="project-section" id="brand-identity">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Project Details -->
+                        <div class="sidebar-card1">
+                            <h5>Project Details</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item active"><i class="bi bi-arrow-right-circle"></i> Client: Aura Wellness</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Category: Branding</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Date: January 2023</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Duration: 6 weeks</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Team: 4 members</li>
+                            </ul>
+                        </div>
+
+                        <!-- Services Provided -->
+                        <div class="sidebar-card">
+                            <h5>Services Provided</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Logo Design</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Brand Guidelines</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Color Palette</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Typography System</li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Box -->
+                        <div class="contact-box">
+                            <i class="bi bi-headset icon"></i>
+                            <h4>Like This Project?</h4>
+                            <p><i class="bi bi-telephone-fill"></i> +1 5589 55488 55</p>
+                            <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
+                            <!-- Contact Button -->
+                            <a href="contact.html" class="btn btn-light mt-3">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-8 content">
+                        <img src="aura.png" alt="Aura Brand Identity">
+                        <h3>Project: Aura Brand Identity</h3>
+                        <p>
+                            A full brand overhaul for a new wellness startup, including logo design and brand guidelines. 
+                            We created a comprehensive visual identity that reflects Aura's commitment to holistic wellness 
+                            and mindfulness. The design incorporates soft, organic shapes and a calming color palette to 
+                            evoke feelings of peace and tranquility.
+                        </p>
+                        <p>
+                            The project involved extensive research into the wellness industry and competitor analysis to 
+                            ensure Aura would stand out in a crowded market. We developed a flexible design system that 
+                            works across various applications from digital platforms to physical packaging.
+                        </p>
+                        <p>
+                            The final deliverables included a complete brand manual, stationery design, social media templates, 
+                            and packaging concepts that all worked together to create a cohesive and memorable brand identity 
+                            for Aura Wellness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E-commerce Website Section -->
+            <div class="project-section" id="ecommerce">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Project Details -->
+                        <div class="sidebar-card1">
+                            <h5>Project Details</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item active"><i class="bi bi-arrow-right-circle"></i> Client: Fashion Retailer</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Category: Web Design</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Date: March 2023</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Duration: 8 weeks</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Team: 5 members</li>
+                            </ul>
+                        </div>
+
+                        <!-- Services Provided -->
+                        <div class="sidebar-card">
+                            <h5>Services Provided</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> UI/UX Design</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Frontend Development</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> E-commerce Integration</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Responsive Design</li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Box -->
+                        <div class="contact-box">
+                            <i class="bi bi-headset icon"></i>
+                            <h4>Like This Project?</h4>
+                            <p><i class="bi bi-telephone-fill"></i> +1 5589 55488 55</p>
+                            <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
+                            <!-- Contact Button -->
+                            <a href="contact.html" class="btn btn-light mt-3">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-8 content">
+                        <img src="ecommerce.png" alt="E-commerce Website">
+                        <h3>Project: E-commerce Website</h3>
+                        <p>
+                            Designed and developed a modern, user-friendly e-commerce platform for a fashion retailer. 
+                            The website features a clean, minimalist design that puts the products front and center, 
+                            with intuitive navigation and a seamless checkout process.
+                        </p>
+                        <p>
+                            We implemented advanced filtering options, personalized recommendations, and a mobile-first 
+                            approach to ensure optimal performance across all devices. The result was a 35% increase in 
+                            conversion rates and significantly reduced cart abandonment.
+                        </p>
+                        <p>
+                            The platform integrated with multiple payment gateways, inventory management systems, and 
+                            CRM software to provide a complete solution for the client. We also implemented advanced 
+                            analytics to track user behavior and identify opportunities for further optimization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Redesign Section -->
+            <div class="project-section" id="app-redesign">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Project Details -->
+                        <div class="sidebar-card1">
+                            <h5>Project Details</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item active"><i class="bi bi-arrow-right-circle"></i> Client: Tech Solutions Inc.</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Category: Mobile App</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Date: May 2023</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Duration: 10 weeks</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Team: 6 members</li>
+                            </ul>
+                        </div>
+
+                        <!-- Services Provided -->
+                        <div class="sidebar-card">
+                            <h5>Services Provided</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> UI/UX Design</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> iOS Development</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Android Development</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> User Testing</li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Box -->
+                        <div class="contact-box">
+                            <i class="bi bi-headset icon"></i>
+                            <h4>Like This Project?</h4>
+                            <p><i class="bi bi-telephone-fill"></i> +1 5589 55488 55</p>
+                            <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
+                            <!-- Contact Button -->
+                            <a href="contact.html" class="btn btn-light mt-3">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-8 content">
+                        <img src="appdesign.png" alt="App Redesign">
+                        <h3>Project: App Redesign</h3>
+                        <p>
+                            A complete UI/UX redesign of a mobile app to improve user engagement and accessibility. 
+                            The previous version of the app had usability issues and low user retention rates.
+                        </p>
+                        <p>
+                            We conducted extensive user research to identify pain points and opportunities for improvement. 
+                            The redesign focused on simplifying navigation, improving visual hierarchy, and creating a more 
+                            intuitive user flow.
+                        </p>
+                        <p>
+                            The new design resulted in a 45% increase in daily active users and a 60% improvement in user 
+                            satisfaction scores. The app now features a modern, clean interface with improved performance 
+                            and accessibility features that make it usable for people with diverse abilities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="project-section" id="social-media">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Project Details -->
+                        <div class="sidebar-card1">
+                            <h5>Project Details</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item active"><i class="bi bi-arrow-right-circle"></i> Client: Lifestyle Brand</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Category: Digital Marketing</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Date: April 2023</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Duration: 12 weeks</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Team: 3 members</li>
+                            </ul>
+                        </div>
+
+                        <!-- Services Provided -->
+                        <div class="sidebar-card">
+                            <h5>Services Provided</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Content Strategy</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Social Media Management</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Campaign Design</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Analytics & Reporting</li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Box -->
+                        <div class="contact-box">
+                            <i class="bi bi-headset icon"></i>
+                            <h4>Like This Project?</h4>
+                            <p><i class="bi bi-telephone-fill"></i> +1 5589 55488 55</p>
+                            <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
+                            <!-- Contact Button -->
+                            <a href="contact.html" class="btn btn-light mt-3">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-8 content">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Social Media Campaign">
+                        <h3>Project: Social Media Campaign</h3>
+                        <p>
+                            Developed and executed a comprehensive social media strategy that increased engagement by 157% 
+                            and followers by 82% in three months. The campaign focused on creating authentic content that 
+                            resonated with the target audience.
+                        </p>
+                        <p>
+                            We developed a content calendar that included a mix of educational, inspirational, and promotional 
+                            content. Each platform (Instagram, Facebook, Twitter, and TikTok) received tailored content optimized 
+                            for that specific audience and format.
+                        </p>
+                        <p>
+                            The campaign included influencer partnerships, user-generated content initiatives, and targeted 
+                            advertising that helped amplify reach and engagement. Regular A/B testing allowed us to optimize 
+                            content performance throughout the campaign duration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Packaging Section -->
+            <div class="project-section" id="packaging">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Project Details -->
+                        <div class="sidebar-card1">
+                            <h5>Project Details</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item active"><i class="bi bi-arrow-right-circle"></i> Client: EcoSkincare</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Category: Packaging Design</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Date: February 2023</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Duration: 7 weeks</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Team: 4 members</li>
+                            </ul>
+                        </div>
+
+                        <!-- Services Provided -->
+                        <div class="sidebar-card">
+                            <h5>Services Provided</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Structural Design</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Graphic Design</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Material Sourcing</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Prototyping</li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Box -->
+                        <div class="contact-box">
+                            <i class="bi bi-headset icon"></i>
+                            <h4>Like This Project?</h4>
+                            <p><i class="bi bi-telephone-fill"></i> +1 5589 55488 55</p>
+                            <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
+                            <!-- Contact Button -->
+                            <a href="contact.html" class="btn btn-light mt-3">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-8 content">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Product Packaging">
+                        <h3>Project: Product Packaging</h3>
+                        <p>
+                            Created eco-friendly, visually striking packaging for a sustainable skincare line that improved 
+                            shelf presence and communicated brand values. The packaging needed to reflect the company's 
+                            commitment to sustainability while maintaining a premium aesthetic.
+                        </p>
+                        <p>
+                            We sourced recycled and biodegradable materials that met both aesthetic and environmental 
+                            requirements. The design incorporated minimalist graphics and a muted color palette that 
+                            reflected the natural ingredients used in the products.
+                        </p>
+                        <p>
+                            The new packaging design resulted in a 30% increase in retail sales and positive feedback 
+                            from both retailers and consumers. The design also won industry recognition for its innovative 
+                            approach to sustainable packaging solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web App Section -->
+            <div class="project-section" id="web-app">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Project Details -->
+                        <div class="sidebar-card1">
+                            <h5>Project Details</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item active"><i class="bi bi-arrow-right-circle"></i> Client: FinanceCorp</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Category: Web Application</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Date: June 2023</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Duration: 14 weeks</li>
+                                <li class="list-group-item"><i class="bi bi-arrow-right-circle"></i> Team: 7 members</li>
+                            </ul>
+                        </div>
+
+                        <!-- Services Provided -->
+                        <div class="sidebar-card">
+                            <h5>Services Provided</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Frontend Development</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Backend Development</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> Database Design</li>
+                                <li class="list-group-item"><i class="bi bi-check-circle text-success catalog-icon"></i> API Integration</li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Box -->
+                        <div class="contact-box">
+                            <i class="bi bi-headset icon"></i>
+                            <h4>Like This Project?</h4>
+                            <p><i class="bi bi-telephone-fill"></i> +1 5589 55488 55</p>
+                            <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
+                            <!-- Contact Button -->
+                            <a href="contact.html" class="btn btn-light mt-3">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-8 content">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Web Application">
+                        <h3>Project: Web Application</h3>
+                        <p>
+                            Built a responsive web application with React.js for a financial services company, featuring 
+                            real-time data visualization and secure transactions. The application needed to handle sensitive 
+                            financial data while providing an intuitive user experience.
+                        </p>
+                        <p>
+                            We implemented robust security measures including encryption, two-factor authentication, and 
+                            regular security audits. The interface was designed to simplify complex financial data through 
+                            intuitive visualizations and clear information architecture.
+                        </p>
+                        <p>
+                            The application processes thousands of transactions daily and has received positive feedback 
+                            for its performance, security, and ease of use. The project was delivered on time and within 
+                            budget, meeting all client requirements and exceeding performance expectations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the project parameter from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('project');
+            
+            // Hide all project sections first
+            document.querySelectorAll('.project-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show the selected project section
+            if (projectId) {
+                const projectSection = document.getElementById(projectId);
+                if (projectSection) {
+                    projectSection.style.display = 'block';
+                } else {
+                    // If project parameter is invalid, show the first project
+                    document.querySelector('.project-section').style.display = 'block';
+                }
+            } else {
+                // If no project parameter, show the first project
+                document.querySelector('.project-section').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Brand Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+        
+        .card-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #4f46e5;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+        
+        .card-subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .card-description {
+            color: #475569;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .card-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            background: #4f46e5;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            margin-top: auto;
+            width: 100%;
+        }
+        
+        .card-button:hover {
+            background: #4338ca;
+        }
+        
+        .card-button i {
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            body {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aura Brand Portfolio</h1>
+            <p class="subtitle">Explore our recent projects and creative solutions</p>
+        </header>
+        
+        <div class="portfolio-grid">
+            <!-- Brand Identity Card -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1607177661072-5278e7acc644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Brand Identity Design">
+                    <div class="card-category">Brand Identity</div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Aura Brand Identity</h2>
+                    <p class="card-subtitle">Project: Aura Brand Identity</p>
+                    <p class="card-description">A full brand overhaul for a new wellness startup, including logo design and brand guidelines that reflect their mission of holistic wellbeing.</p>
+                    <button class="card-button" onclick="redirectToDetail('brand-identity')">View Case Study <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- E-commerce Card -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="E-commerce Website">
+                    <div class="card-category">E-commerce</div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">E-commerce Website</h2>
+                    <p class="card-subtitle">Project: E-commerce Website</p>
+                    <p class="card-description">Designed and developed a modern, user-friendly e-commerce platform for a fashion retailer with focus on seamless shopping experience.</p>
+                    <button class="card-button" onclick="redirectToDetail('ecommerce')">View Case Study <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- App Redesign Card -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="App Redesign">
+                    <div class="card-category">App Redesign</div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">App Redesign</h2>
+                    <p class="card-subtitle">Project: App Redesign</p>
+                    <p class="card-description">A complete UI/UX redesign of a mobile app to improve user engagement and accessibility while maintaining brand consistency.</p>
+                    <button class="card-button" onclick="redirectToDetail('app-redesign')">View Case Study <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- Social Media Campaign Card -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Social Media Campaign">
+                    <div class="card-category">Social Media</div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Social Media Campaign</h2>
+                    <p class="card-subtitle">Project: Social Media Strategy</p>
+                    <p class="card-description">Developed and executed a comprehensive social media strategy that increased engagement by 157% and followers by 82% in three months.</p>
+                    <button class="card-button" onclick="redirectToDetail('social-media')">View Case Study <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- Product Packaging Card -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Product Packaging">
+                    <div class="card-category">Packaging</div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Product Packaging</h2>
+                    <p class="card-subtitle">Project: Packaging Design</p>
+                    <p class="card-description">Created eco-friendly, visually striking packaging for a sustainable skincare line that improved shelf presence and communicated brand values.</p>
+                    <button class="card-button" onclick="redirectToDetail('packaging')">View Case Study <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- Web Application Card -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Web Application">
+                    <div class="card-category">Web App</div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Web Application</h2>
+                    <p class="card-subtitle">Project: Web Development</p>
+                    <p class="card-description">Built a responsive web application with React.js for a financial services company, featuring real-time data visualization and secure transactions.</p>
+                    <button class="card-button" onclick="redirectToDetail('web-app')">View Case Study <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 Aura Brand. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function redirectToDetail(projectType) {
+            // Redirect to portfoliodetail.html with project type as parameter
+            window.location.href = `portfoliodetail.html?project=${projectType}`;
+        }
+    </script>
+</body>
+</html>

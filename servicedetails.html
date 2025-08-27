@@ -11,6 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Inter Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -19,20 +23,27 @@
             padding-top: 60px;
         }
 
-        /* Navbar styles */
+      /* Navbar */
         .navbar {
-  background-color: #100404 !important;
-  padding: 12px 25px;
-}
-.navbar-dark .navbar-nav .nav-link {
-  color: #ddd !important;
-  font-weight: 500;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: #da3636 !important;
-}
+            background-color: #100404 !important;
+            padding: 12px 25px;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ddd !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #da3636 !important;
+        }
+        
 
         /* Sidebar Cards */
         .sidebar-card,
@@ -172,30 +183,27 @@
     </style>
 </head>
 <body>
- <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #100404;">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="/index.html">
-      <img src="logo.png" alt="Kinatic Arts Logo" style="height:40px;width:50px;" class="me-2"/>
-      KINATIC ARTS
-    </a>
-    <!-- Toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/service.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #100404;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Kinatic Arts Logo" style="height:40px;width:50px;" >
+                KINATIC ARTS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Main Section -->
     <div class="container my-5">
         <!-- Back button -->
